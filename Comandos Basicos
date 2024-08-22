@@ -1,0 +1,60 @@
+-- Cria um novo banco de dados chamado 'Curso'
+CREATE DATABASE Curso;
+
+-- Seleciona o banco de dados 'Curso' para uso
+USE Curso;
+
+-- Cria uma tabela chamada 'Vendas' com as colunas especificadas
+CREATE TABLE Vendas(
+    ID_Vendas INT,                -- Identificador único para cada venda
+    Curso VARCHAR(100),           -- Nome do curso vendido
+    Aluno VARCHAR(100),           -- Nome do aluno que comprou o curso
+    Estado VARCHAR(100),          -- Estado do aluno
+    Valor DECIMAL(10,2)           -- Valor pago pelo curso, com até 10 dígitos e 2 casas decimais
+);
+
+-- Insere registros de vendas na tabela 'Vendas'
+INSERT INTO Vendas(ID_Vendas, Curso, Aluno, Estado, Valor)
+VALUES
+    (1, 'Excel', 'João', 'SP', 100),
+    (2, 'VBA', 'Lucas', 'RJ', 50),
+    (3, 'Excel', 'Alice', 'SP', 100),
+    (4, 'Excel', 'Pedro', 'PE', 100),
+    (5, 'VBA', 'Amanda', 'BA', 50),
+    (6, 'Power BI', 'Rita', 'RS', 80),
+    (7, 'Excel', 'Julia', 'RJ', 100),
+    (8, 'Power BI', 'Caio', 'SP', 80),
+    (9, 'Power BI', 'Lara', 'MG', 80),
+    (10, 'Excel', 'Rogério', 'AC', 100);
+
+-- Seleciona todos os registros da tabela 'Vendas'
+SELECT * FROM Vendas;
+
+-- Seleciona os campos 'Aluno', 'Curso' e 'Valor' da tabela 'Vendas'
+SELECT Aluno, Curso, Valor FROM Vendas;
+
+-- Seleciona todos os registros da tabela 'Vendas' e os ordena pelo nome do aluno
+SELECT * FROM Vendas
+ORDER BY Aluno;
+
+-- Seleciona todos os registros da tabela 'Vendas' onde o estado é 'RJ'
+SELECT * FROM Vendas
+WHERE Estado = 'RJ';
+
+-- Atualiza o valor para 150 onde o curso é 'VBA'
+UPDATE Vendas
+SET Valor = 150
+WHERE Curso = 'VBA';
+
+-- Seleciona todos os registros da tabela 'Vendas' para verificar as mudanças
+SELECT * FROM Vendas;
+
+-- Deleta o registro com ID_Vendas igual a 10
+DELETE FROM Vendas
+WHERE ID_Vendas = 10;
+
+-- Seleciona todos os registros da tabela 'Vendas' para verificar as mudanças
+SELECT * FROM Vendas;
+
+-- Remove todos os registros da tabela 'Vendas' mas mantém a estrutura da tabela
+TRUNCATE TABLE Vendas;
