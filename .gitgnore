@@ -1,0 +1,49 @@
+# Sistema de arquivos Unix
+.DS_Store
+
+# Diretório de configuração do ambiente virtual Python
+venv/
+env/
+ENV/
+
+# Arquivos de compilação e logs
+*.log
+*.out
+*.class
+*.pyc
+*.pyo
+*.pyd
+
+# Diretórios de cache
+__pycache__/
+.cache/
+
+# Diretório de configurações específicas de IDEs
+.idea/
+.vscode/
+
+# Arquivos de configuração de editor de texto
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos e diretórios de pacotes Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Arquivos de banco de dados SQLite
+*.db
+
+# Arquivos de segurança
+*.pem
+*.key
+
+# Arquivos de dados sensíveis
+.env
+config.yaml
